@@ -8,7 +8,10 @@ TestRailsAdmin::Application.routes.draw do
 
   get "participant/index"
   get "session/index"
+  get "session/resp"
   get "conference/index"
+
+  get "pdf/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
