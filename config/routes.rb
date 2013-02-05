@@ -6,9 +6,17 @@ TestRailsAdmin::Application.routes.draw do
   devise_for :users
 
 
-  get "participant/index"
+ # get "participant/index"
+=begin
   get "session/index"
   get "session/resp"
+=end
+
+  match "/api/session" => "session#index"
+  match "/api/participant" => "participant#index"
+
+  #resources :session
+
   get "conference/index"
 
   get "pdf/index"

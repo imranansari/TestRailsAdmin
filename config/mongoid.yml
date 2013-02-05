@@ -1,10 +1,4 @@
-development:
-  host: localhost
-  sessions:
-    default:
-      database: confapp_development
-      hosts:
-            - localhost:27017
+
 
 
 development:
@@ -13,6 +7,9 @@ development:
         database: mongoid_dev
         hosts:
           - localhost:27017
+
+    options:
+      include_root_in_json: true
 
 test:
   host: localhost
