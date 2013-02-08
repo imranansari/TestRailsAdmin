@@ -14,10 +14,9 @@ TestRailsAdmin::Application.routes.draw do
 
   match "/api/session" => "session#index"
   match "/api/participant" => "participant#index"
+  match "/api/conference" => "conference#index"
 
   #resources :session
-
-  get "conference/index"
 
   get "pdf/index"
 

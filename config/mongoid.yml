@@ -1,25 +1,17 @@
-
-
-
 development:
     sessions:
       default:
-        database: mongoid_dev
+        database: confapp_development
         hosts:
           - localhost:27017
 
     options:
       include_root_in_json: true
 
-test:
-  host: localhost
-  database: confapp_test
-
 # set these environment variables on your prod server
-production:
 
-  host: localhost
-  database: confapp_development
+production:
+ uri: <%= ENV['MONGOHQ_URL'] %>
 
  #uri: <%= ENV['MONGOHQ_URL'] %>
 
