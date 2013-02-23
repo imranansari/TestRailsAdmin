@@ -2,9 +2,10 @@ class SessionController < ApplicationController
 
   def index
     @sessions = Session.all
+    #@sessions = Session.all.distinct(:start)
 
     respond_to do |format|
-      format.json { render json: @sessions }
+      format.json { render json: @sessions}
     end
   end
 
@@ -28,3 +29,4 @@ class SessionController < ApplicationController
   end
 
 end
+

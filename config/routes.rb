@@ -14,7 +14,9 @@ TestRailsAdmin::Application.routes.draw do
 
   match "/api/session" => "session#index"
   match "/api/participant" => "participant#index"
+  match "/api/conferencesessions" => "conference#conf_with_sessions"
   match "/api/conference" => "conference#index"
+  #match "/api/conf" => "conference#index"
 
   #resources :session
 

@@ -11,20 +11,9 @@ development:
 # set these environment variables on your prod server
 
 production:
- uri: <%= ENV['MONGOHQ_URL'] %>
-
- #uri: <%= ENV['MONGOHQ_URL'] %>
-
-#  host: <%= ENV['MONGOID_HOST'] %>
-#  port: <%= ENV['MONGOID_PORT'] %>
-#  username: <%= ENV['MONGOID_USERNAME'] %>
-#  password: <%= ENV['MONGOID_PASSWORD'] %>
-#  database: <%= ENV['MONGOID_DATABASE'] %>
-
-
-
-  # slaves:
-  #   - host: slave1.local
-  #     port: 27018
-  #   - host: slave2.local
-  #     port: 27019
+    sessions:
+      default:
+        uri: <%= ENV['MONGOHQ_URL'] %>
+        options:
+          skip_version_check: true
+          safe: true

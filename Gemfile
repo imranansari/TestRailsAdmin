@@ -5,7 +5,7 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+#gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -26,7 +26,18 @@ gem 'jquery-rails'
 gem "mongoid", "~> 3.0.0"
 gem "devise", ">= 2.2.1"
 
+gem "geokit"
+
 gem 'rails_admin'
+
+group :production do
+  gem 'thin'
+  gem 'pg'
+end
+
+group :development do
+  gem 'sqlite3'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
