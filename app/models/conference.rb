@@ -2,6 +2,8 @@ class Conference
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  self.include_root_in_json = true
+
   field :name, :type => String
   field :desc
 
