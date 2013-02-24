@@ -16,4 +16,5 @@ production:
         uri: <%= ENV['MONGOHQ_URL'] %>
         options:
           skip_version_check: true
+          include_root_in_json: true
           safe: true
